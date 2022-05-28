@@ -42,7 +42,7 @@ TRPG跑团骰娘
 ├── config.example.yaml # 配置文件模版
 ├── config.yaml         # 实际的读取配置文件（需要自己从example复制一份修改参数）
 ├── start.py            # 程序运行入口
-├── constant            # 代码常量，包含md模版、通知模版、类型等
+├── constant            # 代码常量，包含一些模板和数据
 │ ├── api_permission.py     # api权限申请
 │ ├── b_words.json          # 违禁词
 │ ├── coc.py                # coc随机调查员
