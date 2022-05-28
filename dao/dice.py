@@ -60,7 +60,7 @@ async def unset_setting(uid, group, k):
     async with DBConn() as c:
         run_sql = 'DELETE FROM user_setting WHERE uid=%s AND `group`=%s AND k=%s'
         run_params = (uid, group, k)
-        await c.execute(sql=run_sql, params=run_params)
+        await c.fetch_all(sql=run_sql, params=run_params)
 
 
 # group setting operate
@@ -114,7 +114,7 @@ async def unset_group_setting(gid, k):
     async with DBConn() as c:
         run_sql = 'DELETE FROM dice_wp.group_setting WHERE gid=%s AND k=%s'
         run_params = (gid, k)
-        await c.execute(sql=run_sql, params=run_params)
+        await c.fetch_all(sql=run_sql, params=run_params)
 
 
 # pc operate
@@ -179,11 +179,11 @@ async def del_pc(uid, pc):
     async with DBConn() as c:
         run_sql = 'DELETE FROM talent WHERE uid=%s AND pc=%s'
         run_params = (uid, pc)
-        await c.execute(sql=run_sql, params=run_params)
+        await c.fetch_all(sql=run_sql, params=run_params)
 
         run_sql = 'DELETE FROM user_setting WHERE uid=%s AND k="pc" AND v=%s'
         run_params = (uid, pc)
-        await c.execute(sql=run_sql, params=run_params)
+        await c.fetch_all(sql=run_sql, params=run_params)
 
 
 async def clr_pc(uid):
@@ -194,11 +194,11 @@ async def clr_pc(uid):
     async with DBConn() as c:
         run_sql = 'DELETE FROM talent WHERE uid=%s'
         run_params = uid
-        await c.execute(sql=run_sql, params=run_params)
+        await c.fetch_all(sql=run_sql, params=run_params)
 
         run_sql = 'DELETE FROM user_setting WHERE uid=%s AND k="pc"'
         run_params = uid
-        await c.execute(sql=run_sql, params=run_params)
+        await c.fetch_all(sql=run_sql, params=run_params)
 
 
 # talent operate
@@ -271,7 +271,7 @@ async def del_talent(uid, pc, k):
     async with DBConn() as c:
         run_sql = 'DELETE FROM talent WHERE uid=%s AND pc=%s AND k=%s'
         run_params = (uid, pc, k)
-        await c.execute(sql=run_sql, params=run_params)
+        await c.fetch_all(sql=run_sql, params=run_params)
 
 
 async def clr_talent(uid, pc):

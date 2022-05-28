@@ -67,4 +67,4 @@ async def clr_stats(id, scope):
     async with DBConn() as c:
         run_sql = 'DELETE FROM stats WHERE id=%s AND scope=%s'
         run_params = (id, scope)
-        await c.execute(sql=run_sql, params=run_params)
+        await c.fetch_all(sql=run_sql, params=run_params)
