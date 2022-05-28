@@ -53,7 +53,7 @@ TRPG跑团骰娘
 │ ├── mad.py                # ti/li 模板
 │ └── words.py              # 回复模板
 ├── core                # 核心逻辑处理
-│ ├── bot.py                # 功能注册，api封装 
+│ ├── bot.py                # 函数注册，api功能封装 
 │ ├── dice.py               # 骰娘相关操作
 │ ├── event.py              # 事件处理
 │ ├── function.py           # 功能函数及逻辑
