@@ -1,0 +1,3 @@
+[
+  "违禁词列表，如出现在输入则会raise SecCheckError"
+]
