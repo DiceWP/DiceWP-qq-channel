@@ -1,0 +1,40 @@
+bot:
+  appid: '123' # 机器人appid
+  token: '456' # 机器人token
+  secret: '789' # 机器人secret
+  sandbox: true # bool
+  sandbox_guild: '123456' # 沙箱频道id，如sandbox为true则会屏蔽词频道消息
+database:
+  host: "x.x.x.x" # Mysql数据库服务IP地址
+  port: 3306 # Mysql数据库服务端口
+  db: "db_xxx" # Mysql数据库连接database名字
+  user: "mysql" # Mysql数据库连接用户名
+  password: "mysql_xxx" # Mysql数据库连接password
+limit: # 一些限制
+  dice:
+    max_dice: 500 # 一个表达式最大骰子数
+    max_side: 10000 # 一个骰子最大面数(实际为随机范围)
+    max_time: 10 # 最多能投掷几轮
+    min_time: 1 # 最小骰子数
+  max_length:
+    nickname: 20 # 最长昵称
+    talent: 20 # 最长属性
+    pc: 20 # 最长调查员
+    welcome: 500 # 最长欢迎词
+  cd: # 冷却，每time最多发送size条消息
+    time: 10
+    size: 3
+  stats:
+    max_res: 10000 # 统计计入的最多res (global)
+  st:
+    max_st_one_time: 50 # 一次性能设置的最大属性
+user_default_setting: # 用户默认设置
+  default_side: 100
+  pc: '默认'
+group_default_setting: # 频道默认设置
+  coc_rule: '1'
+token_server: # 小程序access_token中控服务器，代码参考 https://qqbotdoc.rhodescafe.net/wiki/resource/api/qq-miniprogram-secheck.html
+  url: 'https://xxx.xxx/get_token.php'
+  token: 'EXAMPLE_TOKEN!!!'
+resource: 'https://xxx.xxx/' # help发送的图片
+alive_report: 'https://xxx.xxx/alive_report.php' # 上报存活的url，效果 https://dicewp.rhodescafe.net/docs/stats.html
