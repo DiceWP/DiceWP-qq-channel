@@ -11,3 +11,6 @@ async def reporter():
         async with client.get(config.alive_report) as r:
             await r.text()
         await asyncio.sleep(60)
+
+
+asyncio.get_event_loop().create_task(reporter())
