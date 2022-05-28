@@ -47,7 +47,7 @@ TRPG跑团骰娘
 │ ├── b_words.json          # 违禁词
 │ ├── coc.py                # coc随机调查员
 │ ├── config.py             # 读取配置文件的
-│ ├── domains.json          # 顶级域名一拉
+│ ├── domains.json          # 顶级域名一览
 │ ├── error.py              # 自定异常
 │ ├── jrrp.py               # 今日人品模板
 │ ├── mad.py                # ti/li 模板
